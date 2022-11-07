@@ -11,6 +11,14 @@ object DataManager {
         val employees = ArrayList<Employee>()
         var db: SQLiteDatabase = databaseHelper.readableDatabase
 
+        val oldColumns: Array<String> = arrayOf(
+            EmployeeEntry.COLUMN_ID,
+            EmployeeEntry.COLUMN_NAME,
+            EmployeeEntry.COLUMN_DOB,
+            EmployeeEntry.COLUMN_DESIGNATION,
+            EmployeeEntry.COLUMN_SURGEON
+        )
+
         val columns: Array<String> = arrayOf(
             EmployeeEntry.COLUMN_ID,
             EmployeeEntry.COLUMN_NAME,
